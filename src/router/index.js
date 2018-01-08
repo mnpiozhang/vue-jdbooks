@@ -12,10 +12,9 @@ export default new Router({
       path: '/',
       //name: 'HelloWorld',
       component: HelloWorld,
-      //component: App,
       children: [
         {
-          path: "/home",
+          path: "/",
           component: r => require.ensure([], () => r(require('../page/home')), 'home')
         },
         {
